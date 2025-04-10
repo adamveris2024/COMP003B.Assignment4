@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ReleaseTrailers>
+
+@{
+	ViewData["Title"] = "MTG - Release Trailers";
+	Layout = "_Layout";
+}
+
+<h2>MTG - Release Trailers</h2>
+
+@foreach (var trailer in Model)
+{
+	<partial name="_VideoCard" model="trailer" />
+}

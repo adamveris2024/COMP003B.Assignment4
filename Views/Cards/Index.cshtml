@@ -1,0 +1,14 @@
+﻿@model IEnumerable<CardList>
+
+@{
+	ViewData["Title"] = "Card Sets";
+	Layout = "_Layout";
+}
+
+<h2>MTG - Card Sets</h2>
+
+@foreach (var card in Model)
+{
+	<partial name="_ArticleCard" model="card" />
+}
+
