@@ -1,0 +1,26 @@
+﻿@{
+	ViewData["Title"] = "Account Registration";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Product
+
+<h2>Account Registration</h2>
+<p>If you would like to be sent news about upcoming MTG sets, then please fill out the information below</p>
+<form asp-action="Create" method="post">
+	<div>
+		<label asp-for="Name"></label>
+		<input asp-for="Name" class="form-control" />
+		<span asp-validation-for="Name" class="text-danger"></span>
+	</div>
+	<div>
+		<label asp-for="Email"></label>
+		<input asp-for="Email" class="form-control" />
+		<span asp-validation-for="Email" class="text-danger"></span>
+	</div>
+	<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+}
